@@ -8,8 +8,17 @@ buttonStartDanceParty.onclick = function() {
     buttonStartDanceParty.innerHTML = "party's over :("
     // show giphy button
     buttonGiphy.style.display = "block";
+    colorChange()
     console.log("start dance party! Let's dance button shown");
   } else {
     window.location.reload();
   }
 };
+
+// Background color change - generate a random hex code
+function colorChange() {
+    const getrandomColor = Math.floor(Math.random()*16777215).toString(16);
+    console.log('#' + getrandomColor);
+    // add pound to create hex
+    document.body.style.backgroundColor = '#' + getrandomColor; 
+  }

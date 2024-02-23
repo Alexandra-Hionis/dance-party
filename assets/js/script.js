@@ -1,5 +1,5 @@
 
-const buttonStartDanceParty = document.querySelector('.button--start-dance-party');
+const buttonStartDanceParty = document.querySelector('.button-start-dance-party');
 
 buttonStartDanceParty.onclick = function() {
   buttonStartDanceParty.classList.add('dance-party');

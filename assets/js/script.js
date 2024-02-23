@@ -1,14 +1,15 @@
 
-const buttonStartDanceParty = document.querySelector('.button-start-dance-party');
+const buttonToggleDanceParty = document.querySelector('.button-toggle-dance-party');
 const buttonGiphy = document.querySelector('.button-giphy');
-buttonStartDanceParty.onclick = function() {
+buttonToggleDanceParty.onclick = function() {
  // when button is clicked, add class name dance-party to be toggled
- buttonStartDanceParty.classList.toggle('dance-party');
-  if (buttonStartDanceParty.classList.contains('dance-party')) {
-    buttonStartDanceParty.innerHTML = "party's over :("
+ buttonToggleDanceParty.classList.toggle('dance-party');
+  if (buttonToggleDanceParty.classList.contains('dance-party')) {
+    buttonToggleDanceParty.innerHTML = "party's over :("
     // show giphy button
     buttonGiphy.style.display = "block";
     colorChange()
+    setInterval(colorChange, 1000);
     console.log("start dance party! Let's dance button shown");
   } else {
     window.location.reload();

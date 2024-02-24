@@ -1,10 +1,12 @@
 const buttonToggleDanceParty = document.querySelector('.button-toggle-dance-party');
 const buttonGiphy = document.querySelector('.button-giphy');
+const buttonContainer = document.querySelector('.button-container');
 
 buttonToggleDanceParty.onclick = function() {
  // when button is clicked, add class name dance-party to be toggled
  buttonToggleDanceParty.classList.toggle('dance-party');
   if (buttonToggleDanceParty.classList.contains('dance-party')) {
+    buttonContainer.classList.remove('center-button');
     buttonToggleDanceParty.innerHTML = "party's over :("
     // show giphy button
     buttonGiphy.style.display = "block";

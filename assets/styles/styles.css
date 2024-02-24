@@ -47,3 +47,7 @@ img{
     display: none;
     background-color: #58AB6F;
 }
+footer{
+    position: absolute;
+    bottom: 0;
+}

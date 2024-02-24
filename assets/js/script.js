@@ -52,16 +52,16 @@ function getRandomGif(giphyContentData) {
     return item;
 }
 
-const gifResult = getRandomGif(giphyContentData);
+const gifRandomResult = getRandomGif(giphyContentData);
 // test to make sure it spits out random title
-console.log(gifResult.title);
+console.log(gifRandomResult.title);
 
  // Dynamically create container for giphy and add content
  const container = document.createElement('div');
  container.id = 'container';
 // gif uses img element
  const img = document.createElement('img');
-//  img.alt = giphyContentData.title;
+ img.alt = giphyContentData.title;
 //  img.src = giphyContentData.images.downsized.url;
  container.appendChild(img);
 //  Add the container at the beginning of the body element

@@ -36,18 +36,38 @@ fetch(url)
 // This callback gets executed when the JSON parsing is successful. The parsed JSON data is available in the giphyContent variable.
 .then(response => response.json())
 .then(giphyContent => {
-// data
-console.log(giphyContent.data[0].images.downsized.url)
+
+// set data to variable to use 
+let giphyContentData = giphyContent.data;
+// console.log(giphyContentData)
+
+// generate random gif
+function getRandomGif(giphyContentData) {
+
+    // get random index value
+    const randomIndex = Math.floor(Math.random() * giphyContentData.length);
+
+    // get random item
+    const item = giphyContentData[randomIndex];
+    return item;
+}
+
+const gifResult = getRandomGif(giphyContentData);
+// test to make sure it spits out random title
+console.log(gifResult.title);
 
  // Dynamically create container for giphy and add content
  const container = document.createElement('div');
  container.id = 'container';
 // gif uses img element
  const img = document.createElement('img');
- img.alt = giphyContent.data[0].title;
- img.src = giphyContent.data[0].images.downsized.url;
+//  img.alt = giphyContentData.title;
+//  img.src = giphyContentData.images.downsized.url;
  container.appendChild(img);
-//  place on top
+//  Add the container at the beginning of the body element
  document.body.prepend(container);
+
+ 
 })
 };
+

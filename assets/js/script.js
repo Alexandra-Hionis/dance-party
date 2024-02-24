@@ -41,12 +41,10 @@ fetch(url)
 let giphyContentData = giphyContent.data;
 // console.log(giphyContentData)
 
-// generate random gif
+// generate random gif at first
 function getRandomGif(giphyContentData) {
-
     // get random index value
     const randomIndex = Math.floor(Math.random() * giphyContentData.length);
-
     // get random item
     const item = giphyContentData[randomIndex];
     return item;
@@ -54,19 +52,31 @@ function getRandomGif(giphyContentData) {
 
 const gifRandomResult = getRandomGif(giphyContentData);
 // test to make sure it spits out random title
-console.log(gifRandomResult.title);
+// console.log(gifRandomResult.title);
 
  // Dynamically create container for giphy and add content
  const container = document.createElement('div');
  container.id = 'container';
 // gif uses img element
  const img = document.createElement('img');
- img.alt = giphyContentData.title;
-//  img.src = giphyContentData.images.downsized.url;
+ img.alt = gifRandomResult.title;
+ img.src = gifRandomResult.images.downsized.url;
  container.appendChild(img);
 //  Add the container at the beginning of the body element
  document.body.prepend(container);
 
+
+//  New random gif result when the giphy button is clicked
+// Function to set a new random GIF
+function setNewRandomGif() {
+    const newRandomResult = getRandomGif(giphyContentData);
+    img.alt = newRandomResult.title;
+    img.src = newRandomResult.images.downsized.url;
+}
+
+buttonGiphy.onclick = function() {
+    setNewRandomGif();
+};
  
 })
 };

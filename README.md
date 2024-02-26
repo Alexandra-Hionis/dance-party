@@ -8,8 +8,7 @@ A random dancing gif - referencing a giphy query search term "dance" - will appe
 
 The user can then click giphy, to display random dance gifs
 
-![image](assets/images/dance-party-1.png)
-![image](assets/images/dance-party-2.png)
+![image](assets/images/dance-party.gif)
 
 # Developers
 

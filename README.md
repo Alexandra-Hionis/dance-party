@@ -1,6 +1,6 @@
 # dance-party
 
-This is a simple applicatoin that allows a user trigger a "dance party."
+This is a simple web app that allows a user trigger a "dance party."
 
 The user can click a suspicious looking button to cause the background to generate random colors - simulating dance lights.
 
